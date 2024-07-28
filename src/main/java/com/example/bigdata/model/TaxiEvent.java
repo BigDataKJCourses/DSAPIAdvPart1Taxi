@@ -1,5 +1,9 @@
 package com.example.bigdata.model;
 
+import com.opencsv.CSVParser;
+import com.opencsv.CSVParserBuilder;
+
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -87,14 +91,18 @@ public class TaxiEvent {
         this.vendorID = vendorID;
     }
 
-    public static TaxiEvent fromString(String line) throws ParseException {
-        String[] parts = line.split(",");
+    public static TaxiEvent fromString(String line) throws ParseException, IOException {
+        CSVParser parser = new CSVParserBuilder().withSeparator(',').build();
+        String[] parts = parser.parseLine(line);
+
         if (parts.length == 9) {
             TaxiEvent taxiEvent = new TaxiEvent();
             taxiEvent.setTripID(Long.parseLong(parts[0]));
             taxiEvent.setStartStop(Integer.parseInt(parts[1]));
+
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
             taxiEvent.setTimestamp(dateFormat.parse(parts[2]));
+
             taxiEvent.setLocationID(Integer.parseInt(parts[3]));
             taxiEvent.setPassengerCount(Integer.parseInt(parts[4]));
             taxiEvent.setTripDistance(Double.parseDouble(parts[5]));
