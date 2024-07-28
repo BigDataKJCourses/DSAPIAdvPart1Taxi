@@ -27,6 +27,7 @@ public class TaxiEventsAnalysis {
          */
 
         /* TODO: Utwórz źródłowy strumień. Skorzystaj z klasy TaxiEventSource.
+                 Zadbaj o znaczniki czasowe oraz znaczniki watermark.
                  Załóż, że dane są uporządkowane względem znaczników czasowych
 
         DataStream<TaxiEvent> taxiEventsDS = */
@@ -48,7 +49,7 @@ public class TaxiEventsAnalysis {
                  - ile było wyjazdów (startStop = 0),
                  - ile było przyjazdów (startStop = 1)
                  - jaka liczba pasażerów została obsłużona (tylko dla przyjazdów)
-                 - jaka sumeryczna kwota została ujszczona za przejazdy (tylko dla przyjazdów)
+                 - jaka sumaryczna kwota została uiszczona za przejazdy (tylko dla przyjazdów)
 
         DataStream<ResultData> taxiLocStatsDS = */
 
