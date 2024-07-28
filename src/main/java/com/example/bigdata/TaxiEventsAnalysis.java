@@ -4,10 +4,7 @@ import com.example.bigdata.connectors.TaxiEventSource;
 import com.example.bigdata.model.ResultData;
 import com.example.bigdata.model.TaxiEvent;
 import com.example.bigdata.model.TaxiLocEvent;
-import com.example.bigdata.tools.DetInfoProcessWindowFunction;
-import com.example.bigdata.tools.EnrichWithLocData;
-import com.example.bigdata.tools.GetFinalResultWindowFunction;
-import com.example.bigdata.tools.TaxiLocAggregator;
+import com.example.bigdata.tools.*;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.java.utils.ParameterTool;
 
@@ -19,9 +16,7 @@ import org.apache.flink.streaming.api.windowing.time.Time;
 public class TaxiEventsAnalysis {
     public static void main(String[] args) throws Exception {
 
-        ParameterTool propertiesFromFile = ParameterTool.fromPropertiesFile("src/main/resources/flink.properties");
-        ParameterTool propertiesFromArgs = ParameterTool.fromArgs(args);
-        ParameterTool properties = propertiesFromFile.mergeWith(propertiesFromArgs);
+        ParameterTool properties = Properties.get(args);
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
