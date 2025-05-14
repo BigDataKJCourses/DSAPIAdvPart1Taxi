@@ -1,8 +1,8 @@
 package com.example.bigdata.tools;
 
-import com.example.bigdata.model.LocData;
-import com.example.bigdata.model.TaxiEvent;
-import com.example.bigdata.model.TaxiLocEvent;
+import com.example.bigdata.models.LocData;
+import com.example.bigdata.models.TaxiEvent;
+import com.example.bigdata.models.TaxiLocEvent;
 
 import org.apache.flink.api.common.functions.OpenContext;
 import org.apache.flink.api.common.functions.RichMapFunction;

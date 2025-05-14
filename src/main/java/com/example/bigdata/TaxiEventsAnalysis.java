@@ -1,16 +1,9 @@
 package com.example.bigdata;
 
-import com.example.bigdata.connectors.TaxiEventSource;
-import com.example.bigdata.model.ResultData;
-import com.example.bigdata.model.TaxiEvent;
-import com.example.bigdata.model.TaxiLocEvent;
 import com.example.bigdata.tools.*;
-import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.util.ParameterTool;
 
-import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
 
 public class TaxiEventsAnalysis {
     public static void main(String[] args) throws Exception {

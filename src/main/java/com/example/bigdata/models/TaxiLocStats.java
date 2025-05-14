@@ -1,20 +1,12 @@
-package com.example.bigdata.model;
+package com.example.bigdata.models;
 
-import java.util.Date;
-
-public class ResultData {
-    private String borough;
-    private Date from;
-    private Date to;
+public class TaxiLocStats {
     private int departures;
     private int arrivals;
     private int totalPassengers;
     private double totalAmount;
 
-    public ResultData(String borough, Date from, Date to, int departures, int arrivals, int totalPassengers, double totalAmount) {
-        this.borough = borough;
-        this.from = from;
-        this.to = to;
+    public TaxiLocStats(int departures, int arrivals, int totalPassengers, double totalAmount) {
         this.departures = departures;
         this.arrivals = arrivals;
         this.totalPassengers = totalPassengers;
@@ -22,29 +14,6 @@ public class ResultData {
     }
 
     // Getters and setters
-    public String getBorough() {
-        return borough;
-    }
-
-    public void setBorough(String borough) {
-        this.borough = borough;
-    }
-
-    public Date getFrom() {
-        return from;
-    }
-
-    public void setFrom(Date from) {
-        this.from = from;
-    }
-
-    public Date getTo() {
-        return to;
-    }
-
-    public void setTo(Date to) {
-        this.to = to;
-    }
     public int getDepartures() {
         return departures;
     }
@@ -79,14 +48,12 @@ public class ResultData {
 
     @Override
     public String toString() {
-        return "ResultData{" +
-                "borough='" + borough + '\'' +
-                ", from=" + from +
-                ", to=" + to +
-                ", departures=" + departures +
+        return "TaxiLocStats{" +
+                "departures=" + departures +
                 ", arrivals=" + arrivals +
                 ", totalPassengers=" + totalPassengers +
                 ", totalAmount=" + totalAmount +
                 '}';
     }
 }
+

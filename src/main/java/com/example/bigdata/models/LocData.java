@@ -1,4 +1,4 @@
-package com.example.bigdata.model;
+package com.example.bigdata.models;
 
 public class LocData {
     private int locationID;

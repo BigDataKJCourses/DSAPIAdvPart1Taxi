@@ -1,8 +1,8 @@
 package com.example.bigdata.tools;
 
-import com.example.bigdata.model.TaxiLocAccumulator;
-import com.example.bigdata.model.TaxiLocEvent;
-import com.example.bigdata.model.TaxiLocStats;
+import com.example.bigdata.models.TaxiLocAccumulator;
+import com.example.bigdata.models.TaxiLocEvent;
+import com.example.bigdata.models.TaxiLocStats;
 import org.apache.flink.api.common.functions.AggregateFunction;
 
 public class TaxiLocAggregator implements AggregateFunction<TaxiLocEvent, TaxiLocAccumulator, TaxiLocStats> {

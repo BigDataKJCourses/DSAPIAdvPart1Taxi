@@ -1,6 +1,6 @@
 package com.example.bigdata.connectors;
 
-import com.example.bigdata.model.TaxiEvent;
+import com.example.bigdata.models.TaxiEvent;
 import org.apache.flink.streaming.api.functions.source.legacy.SourceFunction;
 import org.apache.flink.util.ParameterTool;
 

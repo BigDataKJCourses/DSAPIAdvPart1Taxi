@@ -1,4 +1,4 @@
-package com.example.bigdata.model;
+package com.example.bigdata.models;
 
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
