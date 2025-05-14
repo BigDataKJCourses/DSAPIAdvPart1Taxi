@@ -6,12 +6,11 @@ import com.example.bigdata.model.TaxiEvent;
 import com.example.bigdata.model.TaxiLocEvent;
 import com.example.bigdata.tools.*;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
-import org.apache.flink.api.java.utils.ParameterTool;
+import org.apache.flink.util.ParameterTool;
 
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
-import org.apache.flink.streaming.api.windowing.time.Time;
 
 public class TaxiEventsAnalysis {
     public static void main(String[] args) throws Exception {
