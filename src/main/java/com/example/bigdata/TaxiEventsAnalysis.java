@@ -1,8 +1,9 @@
 package com.example.bigdata;
 
 import com.example.bigdata.tools.*;
-import org.apache.flink.util.ParameterTool;
 
+
+import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
 public class TaxiEventsAnalysis {

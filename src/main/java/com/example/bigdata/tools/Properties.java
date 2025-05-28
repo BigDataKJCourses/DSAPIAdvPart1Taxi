@@ -1,6 +1,6 @@
 package com.example.bigdata.tools;
 
-import org.apache.flink.util.ParameterTool;
+import org.apache.flink.api.java.utils.ParameterTool;
 
 public class Properties {
     public static ParameterTool get(String[] args) {

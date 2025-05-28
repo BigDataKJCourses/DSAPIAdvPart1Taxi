@@ -4,8 +4,9 @@ import com.example.bigdata.models.LocData;
 import com.example.bigdata.models.TaxiEvent;
 import com.example.bigdata.models.TaxiLocEvent;
 
-import org.apache.flink.api.common.functions.OpenContext;
+
 import org.apache.flink.api.common.functions.RichMapFunction;
+import org.apache.flink.configuration.Configuration;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -22,7 +23,7 @@ public class EnrichWithLocData extends RichMapFunction<TaxiEvent, TaxiLocEvent> 
     }
 
     @Override
-    public void open(OpenContext parameters) throws Exception {
+    public void open(Configuration parameters) throws Exception {
         super.open(parameters);
         locDataMap = loadLocDataMap();
     }

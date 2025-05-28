@@ -1,8 +1,9 @@
 package com.example.bigdata.connectors;
 
 import com.example.bigdata.models.TaxiEvent;
-import org.apache.flink.streaming.api.functions.source.legacy.SourceFunction;
-import org.apache.flink.util.ParameterTool;
+
+import org.apache.flink.api.java.utils.ParameterTool;
+import org.apache.flink.streaming.api.functions.source.SourceFunction;
 
 import java.io.BufferedReader;
 import java.io.File;
